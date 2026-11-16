@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belanja Minimarket</title>
+</head>
+<body>
+
+<h2>Program Belanja Minimarket</h2>
+
+<p id="barang"></p>
+<p id="total"></p>
+<p id="diskon"></p>
+<p id="bayar"></p>
+<p id="ket"></p>
+
+<script>
+let nama = "Beras";
+let harga = 15000;
+let jumlah = 5;
+let total, diskon, bayar, ket;
+
+total = harga * jumlah;
+
+if(total >= 50000){
+    diskon = total * 0.1;
+    ket = "Mendapat diskon 10%";
+}
+else{
+    diskon = 0;
+    ket = "Tidak mendapat diskon";
+}
+
+bayar = total - diskon;
+
+document.getElementById("barang").innerHTML =
+"Nama Barang: " + nama;
+
+document.getElementById("total").innerHTML =
+"Total Belanja: Rp" + total;
+
+document.getElementById("diskon").innerHTML =
+"Diskon: Rp" + diskon;
+
+document.getElementById("bayar").innerHTML =
+"Total Bayar: Rp" + bayar;
+
+document.getElementById("ket").innerHTML = ket;
+
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nilai Siswa</title>
+    </head>
+<body>
+
+    
+<h2>Data Nilai Siswa</h2>
+
+    <p id="demo"></p>
+    <p id="total"></p>
+    <p id="rat"></p>
+    <p id="text"></p>
+    <p id="grade"></p>
+
+    <script>
+
+    let text, grade, nt, na, nq, nut, nuas, tot, rat;
+
+    nt = 90;
+    na = 80;
+    nq = 85;
+    nut = 75;
+    nuas = 80;
+
+    tot = nt + na + nq + nut + nuas;
+    rat = tot / 5;
+
+    if(rat >= 75){
+        text = "Lulus";
+    }
+    else{
+        text = "Gagal";
+    }
+
+    if(rat >= 90){
+        grade = "A";
+    }
+    else if(rat >= 80){
+        grade = "B";
+    }
+    else if(rat >= 70){
+        grade = "C";
+    }
+    else if(rat >= 60){
+        grade = "D";
+    }
+    else{
+        grade = "E";
+    }
+
+    document.getElementById("demo").innerHTML =
+    "Data Nilai Siswa";
+
+    document.getElementById("total").innerHTML =
+    "Total Nilai = " + tot;
+
+    document.getElementById("rat").innerHTML =
+    "Nilai Rata-rata = " + rat;
+
+    document.getElementById("text").innerHTML =
+    "Keterangan = " + text;
+
+    document.getElementById("grade").innerHTML =
+    "Grade Nilai = " + grade;
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Penjualan Buku di Toko</title>
+</head>
+<body>
+    <h1>Data Penjualan Buku di Toko</h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Judul Buku</th>
+            <th>Penulis</th>
+            <th>Tahun Terbit</th>
+            <th>Harga</th>
+            <th>Jumlah Terjual</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Series Bumi</td>
+            <td>Tereliye</td>
+            <td>2023</td>
+            <td>Rp 99.000</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>A&Z</td>
+            <td>Erlin Kurnia</td>
+            <td>2024</td>
+            <td>Rp 95.000</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pemimpi(n)</td>
+            <td>Wildan alamsyah</td>
+            <td>2019</td>
+            <td>Rp 80.000</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Septihan</td>
+            <td>Poppi Pertiwi</td>
+            <td>2016</td>
+            <td>Rp 100.000</td>
+            <td>120</td>
+        </table>
+    <h2>Total Penjualan: Rp 29.004.250</h2>
+</body>
+</html>
