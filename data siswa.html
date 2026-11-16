@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="total"></p>
+    <p id="rat"></p>
+    <p id="text"></p>
+    <p id="grade"></p>
+
+    <script>
+       let x=5;
+       let y=7;
+       let z=x+y;
+       document.getElementById("demo").innerHTML = z;
+
+    /* Kasus adalah
+       menghitung nilai mahasiswa dimana
+       nilai tugas = 90 A
+       nilai absen = 80 B
+       nilai quis  = 70 C
+       nilai uts   = 60 D
+       nilai uas   = 60 E
+       total nilai
+       nilai rata-rata
+    */
+
+    let text, grade, nt,na,nq,nut,nuas,tot,rat;
+    nt=70;
+    na=78;
+    nq=89;
+    nut=50;
+    nuas=75;
+
+    tot=(nt*0.1)+(na*0.2)+(nq*0.05)+(nut*0.20)+(nuas*0.35);
+    rat=tot/0.9;
+
+    if(tot>75){
+        text="lulus";
+    }
+    else{
+        text="gagal";
+    }
+
+    if(rat>=90){
+        grade="A";
+    }
+    else if(rat>=80){
+        grade="B";
+    }
+    else if(rat>=70){
+        grade="C";
+    }
+    else if(rat>=60){
+        grade="D";
+    }
+    else{
+        grade="E";
+    }
+
+    document.getElementById("total").innerHTML = "Total Nilai " +tot;
+    document.getElementById("rat").innerHTML = "Nilai Rata-rata " +rat;
+    document.getElementById("text").innerHTML = "Keterangan " +text;
+    document.getElementById("grade").innerHTML = "Grade Nilai " +grade;
+
+    </script>
+</body>
+</html>
